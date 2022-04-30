@@ -24,11 +24,13 @@ def get_candidates_by_name(candidate_name):
     return matches
 
 
-
-
-
 def get_candidates_by_skill(skill_name):
     """возвращает кандидатов по навыку"""
-    pass
+    candidates = load_candidates_from_json("candidates.json")
+    matches = []
+    for candidate in candidates:
+        if skill_name.lower() in candidate["skills"].lower().split(", "):
+            matches.append(candidate)
+    return matches
 
-print(get_candidates_by_name("Ad"))
+print(get_candidates_by_skill("python"))
