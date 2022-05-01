@@ -4,22 +4,23 @@ user_name = input()
 print(f"Привет, {user_name}, начинаем тренировку")
 
 scores = 0
-name = input(f"My name ___ {user_name}\n")
-if name == "is":
+
+answer = input(f"My name ___ {user_name}\n")
+if answer == "is":
     scores += 10
     print("Ответ верный!\n"+"Вы получаете 10 баллов\n")
 else:
     print("Ответ неверный\n"+"Правильный ответ is\n")
 
-ocupation = input("I___a coder\n")
-if ocupation == "am":
+answer = input("I___a coder\n")
+if answer == "am":
     scores += 10
     print("Ответ верный!\n"+"Вы получаете 10 баллов\n")
 else:
     print("Ответ неверный\n"+"Правильный ответ am\n")
 
-live = input("I live___Moscow\n")
-if live == "in":
+answer = input("I live___Moscow\n")
+if answer == "in":
     scores += 10
     print("Ответ верный!\n"+"Вы получаете 10 баллов\n")
 else:
