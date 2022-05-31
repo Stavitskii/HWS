@@ -1,4 +1,7 @@
 from flask import Flask, request, render_template, send_from_directory
+from main.views import main_blueprint
+
+
 # from functions import ...
 
 POST_PATH = "posts.json"
@@ -7,7 +10,7 @@ UPLOAD_FOLDER = "uploads/images"
 app = Flask(__name__)
 
 
-@app.route("/")
+"""@app.route("/")
 def page_index():
     pass
 
@@ -25,12 +28,13 @@ def page_post_form():
 @app.route("/post", methods=["POST"])
 def page_post_upload():
     pass
+"""
 
-
+app.register_blueprint(main_blueprint)
 @app.route("/uploads/<path:path>")
 def static_dir(path):
     return send_from_directory("uploads", path)
 
-
-app.run()
+if __name__ == "__main__":
+    app.run()
 
