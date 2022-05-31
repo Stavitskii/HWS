@@ -6,7 +6,7 @@ def get_posts(path):
     with open(path, 'r', encoding='UTF-8') as file:
         return json.load(file)
 
-def get_post_by_substrind(s, path):
+def get_post_by_substring(s, path):
     posts = get_posts(path)
     finded_posts = []
     for post in posts:
@@ -15,7 +15,8 @@ def get_post_by_substrind(s, path):
     return finded_posts
 
 
-#print(get_posts(POST_PATH))
+#print(get_posts('../posts.json'))
+#print(get_post_by_substrind('ага', '../posts.json'))
 
 
 
