@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request
 from main.utils import *
 import logging
+from exceptions import *
 
 logging.basicConfig(filename="logger.log", level=logging.INFO)
 
@@ -16,8 +17,11 @@ def main_page():
 def search_page():
     logging.info("Выполняется поиск")
     s = request.args.get("s", "")
-    #posts = get_posts('posts.json')
-    posts = get_post_by_substring('posts.json',s)
+    try:
+        posts = get_post_by_substring('posts.json',s)
+    except DataJsonError:
+        return "Posts file loading error"
+
     return render_template("post_list.html", posts=posts, s=s)
 
 

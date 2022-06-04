@@ -1,10 +1,16 @@
 import json
+from exceptions import *
 
 
 
 def get_posts(path):
-    with open(path, 'r', encoding='UTF-8') as file:
-        return json.load(file)
+    try:
+        with open(path, 'r', encoding='UTF-8') as file:
+            return json.load(file)
+    except(FileNotFoundError, json.JSONDecodeError):
+        raise DataJsonError
+
+
 
 def get_post_by_substring(posts,s):
     posts = get_posts(posts)
