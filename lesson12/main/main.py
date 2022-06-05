@@ -25,4 +25,3 @@ def search_page():
     return render_template("post_list.html", posts=posts, s=s)
 
 
-#print(get_post_by_substring('ага', '../posts.json'))

@@ -22,8 +22,6 @@ def get_post_by_substring(posts,s):
     return found_posts
 
 
-#print(get_posts('../posts.json'))
-#print(get_post_by_substring('ага', '../posts.json'))
 
 
 
