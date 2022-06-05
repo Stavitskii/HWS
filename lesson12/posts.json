@@ -62,5 +62,13 @@
     {
         "pic": "./../uploads/images/ava.JPG",
         "content": "Пятый пост"
+    },
+    {
+        "pic": "./../uploads/images/ava.JPG",
+        "content": "Контрольный пост"
+    },
+    {
+        "pic": "./../uploads/images/ava.JPG",
+        "content": "Контрольный пост 2"
     }
 ]
